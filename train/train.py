@@ -34,7 +34,7 @@ num_hidden_list = [512,256,128]
 num_output = 10
 lr_list = [0.2,0.1]
 l2_list = [1e-04,5e-04]
-epochs = 120
+#epochs = 120
 batch_size = 32
 
 d = []
