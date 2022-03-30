@@ -34,4 +34,4 @@ for X,y in test_iter:
     y = cp.asarray(y)
     y_hat = network(X)
     accuracy += (cp.argmax(y_hat,axis=1)==y).sum()
-print('测试集准确率:',accuracy/len(test_iter))
+print('accuracy:',accuracy/len(test_iter))
