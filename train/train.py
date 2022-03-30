@@ -13,7 +13,7 @@ import pandas as pd
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "2"  
 
-#读入数据
+#load MNIST
 X_train, y_train = loadlocal_mnist(
             images_path='/home/leijingshi/DL/homework1/data/train-images-idx3-ubyte', 
             labels_path='/home/leijingshi/DL/homework1/data/train-labels-idx1-ubyte')
@@ -28,7 +28,7 @@ def normalize(x):
 X_train = normalize(X_train)
 X_test = normalize(X_test)
 
-#超参数，grid_search
+#grid_search
 num_input = 28*28
 num_hidden_list = [512,256,128]
 num_output = 10
@@ -39,7 +39,6 @@ batch_size = 32
 
 d = []
 
-#训练
 for num_hidden in num_hidden_list:
     for lr in lr_list:
         for l2 in l2_list:
